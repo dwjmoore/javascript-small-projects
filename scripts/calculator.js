@@ -79,11 +79,11 @@ class Calculator {
 		this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand);
 		if (this.operation != null) {
 			this.previousOperandTextElement.innerText = `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`;
+		} else {
+			this.previousOperandTextElement.innerText = '';
 		}
 	}
 }
-
-
 
 const numberButtons = document.querySelectorAll('[data-number]');
 const operationButtons = document.querySelectorAll('[data-operation]');
