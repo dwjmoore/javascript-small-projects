@@ -1,7 +1,5 @@
-*, *::before, *:after {
+*, *::before, *::after {
 	box-sizing: border-box;
-	font-family: 'Michroma', sans-serif;
-	font-weight: normal;
 }
 
 body {
