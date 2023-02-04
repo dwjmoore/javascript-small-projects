@@ -8,7 +8,7 @@ const endpoint = 'https://random-quote-api.dwjmoore.repl.co/random-quote';
 async function getQuote() {
 	spinner.classList.remove('hidden');
 	newQuoteButton.disabled = true;
-	
+
 	try {
 		const response = await fetch(endpoint);
 		if (!response.ok) {
