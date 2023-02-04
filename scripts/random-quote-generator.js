@@ -7,8 +7,6 @@ const endpoint = 'https://random-quote-api.dwjmoore.repl.co/random-quote';
 
 async function getQuote() {
 	spinner.classList.remove('hidden');
-	newQuoteButton.disabled = true;
-
 	try {
 		const response = await fetch(endpoint);
 		if (!response.ok) {
@@ -17,9 +15,8 @@ async function getQuote() {
 		const json = await response.json();
 		displayQuote(json.quote);
 	} catch {
-		alert('Failed to fetch new quote. Try again. The server might still be waking up.')
+		alert('Failed to fetch new quote. The server might still be waking up. Try again.');
 	} finally {
-		newQuoteButton.disabled = false;
 		spinner.classList.add('hidden');
 	}
 }
