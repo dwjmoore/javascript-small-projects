@@ -18,7 +18,7 @@ async function getQuote() {
 		displayQuote(json.quote);
 		setTweetButton(json.quote);
 	} catch {
-		alert('Failed to fetch new quote. The server might still be waking up. Try again.');
+		alert("The random quote api is waking up. Click the 'Generate a new quote' button.");
 	} finally {
 		spinner.classList.add('hidden');
 	}
@@ -33,4 +33,4 @@ function setTweetButton(quote) {
 	twitterButton.setAttribute('onclick', `window.location.href='https://twitter.com/share?text=${quote}'`);
 }
 
-// onclick="window.location.href='https://w3docs.com';">
+getQuote();
