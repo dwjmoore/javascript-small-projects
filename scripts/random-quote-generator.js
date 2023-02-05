@@ -3,6 +3,8 @@ const spinner = document.querySelector('#js-spinner');
 const newQuoteButton = document.querySelector('#js-new-quote');
 newQuoteButton.addEventListener('click', getQuote);
 
+const twitterButton = document.querySelector('#js-tweet');
+
 const endpoint = 'https://random-quote-api.dwjmoore.repl.co/random-quote';
 
 async function getQuote() {
@@ -14,6 +16,7 @@ async function getQuote() {
 		}
 		const json = await response.json();
 		displayQuote(json.quote);
+		setTweetButton(json.quote);
 	} catch {
 		alert('Failed to fetch new quote. The server might still be waking up. Try again.');
 	} finally {
@@ -25,3 +28,9 @@ function displayQuote(quote) {
 	const quoteText = document.querySelector('.quote');
 	quoteText.textContent = quote;
 }
+
+function setTweetButton(quote) {
+	twitterButton.setAttribute('onclick', `window.location.href='https://twitter.com/share?text=${quote}'`);
+}
+
+// onclick="window.location.href='https://w3docs.com';">
