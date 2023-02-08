@@ -39,3 +39,28 @@ const isInputEmpty = (input) => {
 const showError = (error) => {
 	errorSpan.innerHTML = `&#128680 ${error} &#128680`;
 };
+
+const getData = async () => {
+	const userInput = input.value;
+	if (isInputEmpty(userInput)) return;
+
+	params.gsrsearch = userInput;
+	disableUi();
+
+	const { data } = await axios.get(endpoint, { params });
+
+	console.log(data);
+};
+
+const handleKeyEvent = (event) => {
+	if (event.key === 'Enter') {
+		getData();
+	}
+};
+
+const registerEventHandlers = () => {
+	input.addEventListener('keydown', handleKeyEvent);
+	submitButton.addEventListener('click', getData);
+};
+
+registerEventHandlers();
