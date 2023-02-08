@@ -66,13 +66,12 @@ const gatherData = (pages) => {
 const getData = async () => {
 	const userInput = input.value;
 	if (isInputEmpty(userInput)) return;
-
 	params.gsrsearch = userInput;
+	clearPreviousResults();
 	disableUi();
 
 	try {
 		const { data } = await axios.get(endpoint, { params });
-
 		if (data.error) throw new Error(data.error.info);
 		gatherData(data.query.pages);
 	} catch (error) {
