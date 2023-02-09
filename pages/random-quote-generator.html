@@ -5,28 +5,39 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Random Quote Generator</title>
+	<script src="https://kit.fontawesome.com/9ff629401a.js" crossorigin="anonymous"></script>
 	<link href="../styles/random-quote-generator.css" rel="stylesheet" type="text/css" />
 	<script src="../scripts/random-quote-generator.js" defer></script>
 </head>
 
 <body>
-	<section>
-		<div class="quote-generator-wrapper">
-			<div class="title">Random Quotes</div>
-			<div class="quote"></div>
-			<div id="js-spinner" class="spinner hidden">
-				<div class="rect1"></div>
-				<div class="rect2"></div>
-				<div class="rect3"></div>
-				<div class="rect4"></div>
-				<div class="rect5"></div>
+	<header>
+		<a href="https://portfolio.dwjmoore.repl.co/">
+			<i class="fa-solid fa-book-open"></i>
+		</a>
+		<a href="../index.html">
+			<i class="fa-solid fa-house"></i>
+		</a>
+	</header>
+	<main>
+		<section>
+			<div class="quote-generator-wrapper">
+				<div class="title">Random Quotes</div>
+				<div class="quote"></div>
+				<div id="js-spinner" class="spinner hidden">
+					<div class="rect1"></div>
+					<div class="rect2"></div>
+					<div class="rect3"></div>
+					<div class="rect4"></div>
+					<div class="rect5"></div>
+				</div>
+				<div class="buttons-wrapper">
+					<button id="js-new-quote">Generate a new quote</button>
+					<button id="js-tweet">Tweet the quote</button>
+				</div>
 			</div>
-			<div class="buttons-wrapper">
-				<button id="js-new-quote">Generate a new quote</button>
-				<button id="js-tweet">Tweet the quote</button>
-			</div>
-		</div>
-	</section>
+		</section>
+	</main>
 </body>
 
 </html>
