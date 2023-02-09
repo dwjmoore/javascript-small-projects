@@ -17,7 +17,6 @@ async function getQuote() {
 		const json = await response.json();
 		displayQuote(json.quote);
 		setTweetButton(json.quote);
-		setTweetButton(json.quote);
 	} catch {
 		alert("The random quote api is waking up. Click the 'Generate a new quote' button.");
 	} finally {
