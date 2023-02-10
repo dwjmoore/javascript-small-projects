@@ -4,15 +4,38 @@
 
 body {
 	box-sizing: inherit;
-	height: 100vh;
 	background: radial-gradient(circle farthest-side, #fceabb, #f8b500);
   background-repeat: no-repeat;
+	font-family: 'Lato', sans-serif;
 }
 
 header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	grid-row-gap: 1.75rem;
+}
+
+header a {
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	margin-top: 20px;
+	margin-right: 30px;
+	align-self: flex-end;
+}
+
+header a:hover {
+	color: #0033bd;
+}
+
+header .logo {
+	width: 20rem;
+}
+
+header h2 {
+	font-size: 1.4rem;
+	font-family: 'Lora', serif;
 }
 
 .projects-links-wrapper {
@@ -25,7 +48,6 @@ header {
 	background: #0043f8;
 	color: #bff800;
 	font-size: 2rem;
-	font-family: 'Lato', sans-serif;
 	border-radius: 0.5rem;
 	display: flex;
 	flex-direction: column;
