@@ -7,6 +7,7 @@ body {
 	background: radial-gradient(circle farthest-side, #fceabb, #f8b500);
   background-repeat: no-repeat;
 	font-family: 'Lato', sans-serif;
+	min-height: 100vh;
 }
 
 header {
@@ -47,7 +48,7 @@ header h2 {
 .project-link {
 	background: #0043f8;
 	color: #bff800;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	border-radius: 0.5rem;
 	display: flex;
 	flex-direction: column;
@@ -55,8 +56,8 @@ header h2 {
 	align-items: center;
 	grid-row-gap: 1rem;
 	text-decoration: none;
-	height: 25rem;
-	width: 25rem;
+	height: 22rem;
+	width: 22rem;
 	margin: 2rem;
 	box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.12), 0 0.1rem 0.2rem rgba(0, 0, 0, 0.24);
 	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
