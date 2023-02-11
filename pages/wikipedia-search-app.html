@@ -4,18 +4,23 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wikipedia Search App</title>
 	<script src="https://kit.fontawesome.com/9ff629401a.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Raleway:wght@300&display=swap"
 		rel="stylesheet">
+
+	<link href="../styles/reset.css" rel="stylesheet" type="text/css" />
+	<link href="../styles/header.css" rel="stylesheet" type="text/css" />
 	<link href="../styles/wikipedia-search-app.css" rel="stylesheet" type="text/css" />
+
 	<script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
 	<script src="../scripts/wikipedia-search-app.js" defer></script>
-	<title>Wikipedia Search App</title>
 </head>
 
 <body>
+
 	<header>
 		<a href="https://portfolio.dwjmoore.repl.co/">
 			<i class="fa-solid fa-book-open"></i>
@@ -24,14 +29,15 @@
 			<i class="fa-solid fa-house"></i>
 		</a>
 	</header>
+
 	<main>
 
 		<section class="container">
-			<img class="header-image"
+			<img class="logo"
 				src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/657px-Wikipedia-logo-v2.svg.png"
 				alt="Wikipedia Logo" />
-			<h1 class="header-title">WIKIPEDIA SEARCH APP</h1>
-			<div class="header-search-bar">
+			<h1 class="title">WIKIPEDIA SEARCH APP</h1>
+			<div class="search-bar">
 				<input id="input" aria-label="What do you want to know?" type="text" class="search-bar-input"
 					placeholder="What do you want to know?" autofocus required />
 				<button id="submit" type="button" class="search-bar-button" aria-label="search">
@@ -50,7 +56,9 @@
 			<p id="error" class="results-error"></p>
 			<div id="results" class="results-items"></div>
 		</section>
+
 	</main>
+
 </body>
 
 </html>
