@@ -10,15 +10,19 @@ body {
 	min-height: 100vh;
 }
 
-header a:hover {
-	color: #0033bd;
+.title-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	grid-row-gap: 2rem;
 }
 
-header .logo {
+.title-wrapper .logo {
 	width: 20rem;
 }
 
-header h2 {
+.title-wrapper h2 {
 	font-size: 1.4rem;
 	font-family: 'Lora', serif;
 }
