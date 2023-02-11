@@ -1,7 +1,3 @@
-*, *::before, *::after {
-	box-sizing: border-box;
-}
-
 body {
 	box-sizing: inherit;
 	background: radial-gradient(circle farthest-side, #fceabb, #f8b500);
