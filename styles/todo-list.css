@@ -14,8 +14,40 @@ main {
 	margin-top: 5rem;
 }
 
-h1 {
+.todo-title-wrapper h1 {
 	font-family: 'Special Elite', cursive;
 	font-size: 5rem;
 	color: #1d1d1d;
+}
+
+.todo-input-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-column-gap: 0.25rem;
+	padding: 0.25rem;
+	border: 1px solid #f4f4f4;
+	box-shadow: 0px 2px 4px #dfdfdf;
+}
+
+.todo-input-wrapper:hover {
+	box-shadow: 0px 3px 5px #c0c0c0;
+}
+
+.todo-input-wrapper input {
+	width: 25vw;
+	height: 2rem;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	border: none;
+	background-color: #f5f5f5;
+}
+
+.todo-input-wrapper button {
+	border: none;
+	background-color: #f5f5f5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
 }
