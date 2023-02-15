@@ -86,6 +86,10 @@ input[type="checkbox"] {
 	color: red;
 }
 
+.delete-todo i:hover {
+	cursor: pointer;
+}
+
 .todo-input-form {
 	display: flex;
 	justify-content: center;
