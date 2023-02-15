@@ -1,4 +1,6 @@
 let toDoItems = [];
+const form = document.querySelector('.todo-input-form');
+const list = document.querySelector('#todo-list');
 
 const addToDo = (text) => {
 	const toDo = {
@@ -12,7 +14,8 @@ const addToDo = (text) => {
 }
 
 const renderToDo = (toDo) => {
-	const list = document.querySelector('#todo-list');
+	item = document.querySelector(`[data-key = '${toDo.id}']`);
+
 	const isChecked = toDo.checked ? 'done' : '';
 	const node = document.createElement("li");
 
@@ -28,10 +31,14 @@ const renderToDo = (toDo) => {
 		</button>
  	`;
 
-	list.append(node);
+	item ? list.replaceChild(node, item) : list.append(node);
 }
 
-const form = document.querySelector('.todo-input-form');
+const toggleDone = (key) => {
+	const index = toDoItems.findIndex(item => item.id === Number(key));
+	toDoItems[index].checked = !toDoItems[index].checked;
+	renderToDo(toDoItems[index]);
+}
 
 form.addEventListener('submit', event => {
 	event.preventDefault();
@@ -43,5 +50,12 @@ form.addEventListener('submit', event => {
 		addToDo(text);
 		input.value = '';
 		input.focus();
+	}
+});
+
+list.addEventListener('click', event => {
+	if (event.target.classList.contains('tick')) {
+		const itemKey = event.target.parentElement.dataset.key;
+		toggleDone(itemKey);
 	}
 });
