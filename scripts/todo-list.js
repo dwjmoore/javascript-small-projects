@@ -14,6 +14,8 @@ const addToDo = (text) => {
 }
 
 const renderToDo = (toDo) => {
+	localStorage.setItem('toDoItemsRef', JSON.stringify(toDoItems));
+	
 	item = document.querySelector(`[data-key = '${toDo.id}']`);
 
 	if (toDo.deleted) {
@@ -75,5 +77,15 @@ list.addEventListener('click', event => {
 		const itemKey = event.target.parentElement.dataset.key;
 		console.log("Delete icon clicked");
 		deleteToDo(itemKey);
+	}
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	const ref = localStorage.getItem('toDoItemsRef');
+	if (ref) {
+		toDoItems = JSON.parse(ref);
+		toDoItems.forEach(t => {
+			renderToDo(t);
+		});
 	}
 });
