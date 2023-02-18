@@ -30,8 +30,8 @@ body {
 }
 
 .project-link {
-	background: #0043f8;
-	color: #bff800;
+	background: transparent;
+	color: black;
 	font-size: 1.5rem;
 	border-radius: 0.5rem;
 	display: flex;
@@ -51,7 +51,7 @@ body {
 
 .project-link:hover {
 	box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.16), 0 0.3rem 0.6rem rgba(0, 0, 0, 0.23);
-	background-color: #0033bd;
+	background-color: #ffc320;
 }
 
 .project-link img {
