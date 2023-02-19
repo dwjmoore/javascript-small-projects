@@ -3,17 +3,23 @@ const blur = document.querySelector('#blur');
 const baseColor = document.querySelector('#base');
 
 const handleSpacingUpdate = () => {
-	console.log(spacing.value);
+	const suffix = spacing.dataset.sizing;
+	document.documentElement.style.setProperty('--spacing', spacing.value + suffix);
 }
 
 const handleBlurUpdate = () => {
-	console.log(blur.value);
+	const suffix = blur.dataset.sizing;
+	document.documentElement.style.setProperty('--blur', blur.value + suffix);
 }
 
 const handleBaseColorUpdate = () => {
-	console.log(baseColor.value);
+	document.documentElement.style.setProperty('--base', baseColor.value);
 }
 
 spacing.addEventListener('change', handleSpacingUpdate);
 blur.addEventListener('change', handleBlurUpdate);
 baseColor.addEventListener('change', handleBaseColorUpdate);
+
+spacing.addEventListener('mousemove', handleSpacingUpdate);
+blur.addEventListener('mousemove', handleBlurUpdate);
+baseColor.addEventListener('mousemove', handleBaseColorUpdate);
