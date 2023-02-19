@@ -1,0 +1,7 @@
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	min-height: calc(100vh - 89px);
+}
