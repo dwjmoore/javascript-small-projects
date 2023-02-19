@@ -1,3 +1,24 @@
+:root {
+	--base: #ffc600;
+	--spacing: 1rem;
+	--blur: 1rem;
+}
+
+img {
+	padding: var(--spacing);
+	background: var(--base);
+	filter: blur(var(--blur));
+}
+
+.hl {
+	color: var(--base);
+}
+
+
+/*
+	Default styles
+*/
+
 body {
 	background: #193549;
 }
