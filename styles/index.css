@@ -3,7 +3,7 @@ body {
 	background: radial-gradient(circle farthest-side, #fceabb, #f8b500);
   background-repeat: no-repeat;
 	font-family: 'Lato', sans-serif;
-	min-height: 100vh;
+	
 }
 
 .title-wrapper {
