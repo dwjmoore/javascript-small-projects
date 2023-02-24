@@ -15,7 +15,7 @@ const addToDo = (text) => {
 
 const renderToDo = (toDo) => {
 	localStorage.setItem('toDoItemsRef', JSON.stringify(toDoItems));
-	
+
 	item = document.querySelector(`[data-key = '${toDo.id}']`);
 
 	if (toDo.deleted) {
@@ -24,7 +24,7 @@ const renderToDo = (toDo) => {
 	}
 
 	const isChecked = toDo.checked ? 'done' : '';
-	const node = document.createElement("li");
+	const node = document.createElement("div");
 
 	node.setAttribute('class', `todo-item ${isChecked}`);
 	node.setAttribute('data-key', toDo.id);
