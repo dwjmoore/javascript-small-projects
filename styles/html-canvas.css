@@ -1,0 +1,10 @@
+header {
+	background-color: #bada55;
+	margin-bottom: 0;
+}
+
+#draw {
+	border: 25px solid #bada55;
+	height: calc(100vh - 50px);
+	width: 100vw;
+}
