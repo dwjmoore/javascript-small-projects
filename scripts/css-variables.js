@@ -1,25 +1,9 @@
-const spacing = document.querySelector('#spacing');
-const blur = document.querySelector('#blur');
-const baseColor = document.querySelector('#base');
+const inputs = document.querySelectorAll('.controls input');
 
-const handleSpacingUpdate = () => {
-	const suffix = spacing.dataset.sizing;
-	document.documentElement.style.setProperty('--spacing', spacing.value + suffix);
+function handleUpdate() {
+	const suffix = this.dataset.sizing || '';
+	document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
 }
 
-const handleBlurUpdate = () => {
-	const suffix = blur.dataset.sizing;
-	document.documentElement.style.setProperty('--blur', blur.value + suffix);
-}
-
-const handleBaseColorUpdate = () => {
-	document.documentElement.style.setProperty('--base', baseColor.value);
-}
-
-spacing.addEventListener('change', handleSpacingUpdate);
-blur.addEventListener('change', handleBlurUpdate);
-baseColor.addEventListener('change', handleBaseColorUpdate);
-
-spacing.addEventListener('mousemove', handleSpacingUpdate);
-blur.addEventListener('mousemove', handleBlurUpdate);
-baseColor.addEventListener('mousemove', handleBaseColorUpdate);
+inputs.forEach(input => input.addEventListener('change', handleUpdate));
+inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
